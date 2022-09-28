@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="sides" id="sidebar-lt">
+        </div>
+        <div class="main" id="main">
+            <div class="pagetitle"><h1>Muh Books</h1></div>
+            <div class="stuff">
+                <div class="menu" id="menu">
+                    <button class="newbutton" id="newbutton">NEW ENTRY</button>
+                    <button class="librarybutton" id="librarybutton">LIBRARY</button>
+                    <button class="arraybutton" id="arraybutton">ARRAY</button>
+                    <button class="autofill" id="autofill">AUTOFILL</button>
+                    <button class="clearlibrary" id="clearlibrary">Clear</button>
 
+                </div>
+                <div class="library" id="library">
+                    <div class="formpopup" id="formpopup">      <!-- FORM POPUP -->
+                        <form class="bookform" id="bookform">
+            
+                            <label for="book_title"><p class="req">Title: </p></label>
+                            <input type="text" id="book_title" name=”book_title” placeholder="" title="Book Title" minlength="1" >
+                            
+                            <label for="book_author"><p class="req">Author: </p></label>
+                            <input type="text" id="book_author" name=”book_author” placeholder="" title="Book Author" minlength="1">
+                            
+                            <label for="book_pages"><p class="req">Pages: </p></label>
+                            <input type="number" id="book_pages" name=”book_pages” placeholder="" title="Book Pgaes" minlength="1">
+                            
+                            <label for="book_read"><p class="req">Read: </p></label>
+                            <input type="checkbox" id="book_read" name=”book_read” placeholder="" title="Book Read" value="">
+                            <button type="submit" id="formbutton">Enter</button>
+                        </form>
+                    </div>
+                    <!-- <div class="book">
+                        <div class="booktitle">Title</div>
+                        <div>Author</div>
+                        <div>Pages</div>
+                        <div>Read</div>
+                        <div class="delbutton"><img src="icons/delete.png" alt=""></div>
+                    </div> -->
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="sides" id="sidebar-rt">
+        </div>
+    </div>
+    <div class="mid" id="mid">
+
+    </div>
+
+
+</body>
+</html>

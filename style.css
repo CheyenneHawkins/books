@@ -1,1 +1,235 @@
+:root {
+    --sitecolor: rgb(207, 210, 207);
+    --popupsize: 400px;
+    --sidecolor: rgb(255, 255, 255);
+    --midlane: 700px;
+    --button1: rgb(250, 148, 148);
+    --button2: rgb(235, 29, 54);
+    --cardcolor: rgb(155, 155, 155);
 
+
+}
+
+
+html {
+    font-size: 24px;
+    font-family: 'Actor', sans-serif;
+    background-color: var(--sitecolor);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 100px;
+    background-color: var(--sidecolor);
+
+}
+
+
+
+.container {
+    /* width: 100vw;  */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar-lt" "main" "sidebar-rt";
+    justify-content: center; 
+
+}
+
+.container > * {
+    /* border: pink solid 2px; */
+}
+
+.sides {
+    background-color: var(--sidecolor);
+    /* width: ; */
+    height: 100vh;
+    overflow: hidden;
+    z-index: 5;
+
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: var(--midlane);
+    justify-content: center;
+    /* grid-area: main; */
+}
+
+.main > * {
+    /* border: pink solid 2px; */
+}
+
+.pagetitle {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.stuff {
+    /* border: pink solid 2px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.stuff > * {
+    /* border: pink solid 2px; */
+
+}
+
+.menu {
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* .menutop {
+    /* border: pink solid 2px; */
+    height: 100%;
+    width: 100%;
+}
+
+.menubot {
+    display: block;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    align-items: center;
+    /* border: pink solid 2px; */
+    height: 100%;
+    width: 100%; */
+
+}
+
+.menubot button {
+    width: 100%;
+    color: white;
+    transition: .4s;
+}
+
+.menubot button:hover {
+    width: 110%;
+    transform: translateX(-15px);
+    transform: scale(1.1);
+}
+
+
+
+#newbutton {
+    background-color: var(--button1);
+
+}
+
+#librarybutton {
+    background-color: var(--button2);
+
+}
+
+#formpopup {
+    /* display: flex; */
+    display: none;
+    /* position: fixed; */
+    /* top: 50%; */
+    left: 35%;
+    z-index: 4;
+    width: var(--popupsize);
+    height: var(--popupsize);
+    /* border: pink solid 0px; */
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.bookform {
+    padding: 0;
+    margin: 0;
+
+}
+
+.bookform input {
+    border: black solid 2px;
+    border-radius: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bookform label {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+
+}
+
+
+.bookform {
+
+
+}
+
+.library{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px,1fr));
+    grid-template-rows: repeat(auto, auto);
+    grid-gap: 40px;
+
+}
+
+.book {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1opx;
+    /* border: rgb(255, 83, 83) solid 2px; */
+    border: white solid 1px;
+    background-color: var(--cardcolor);
+    border-radius: 20%;
+    height: 200px;
+    width: minmax(200px, 1fr);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.book > * {
+    /* border: rgb(255, 171, 171) solid 1px; */
+    justify-self: center;
+    color: white;
+}
+
+.delbutton {
+    justify-self: end;
+    padding-right: 20px;
+}
+
+.booktitle {
+    font-style: italic ;
+}
+
+.unread {
+    color: red;
+
+}
+
+.read {
+    color: rgb(0, 255, 8);
+
+}
